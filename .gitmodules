@@ -1,0 +1,6 @@
+[submodule "recipes/jq"]
+	path = recipes/jq
+	url = https://github.com/recipkg/jq.git
+[submodule "generated/jq-source"]
+	path = generated/jq-source
+	url = https://github.com/recipkg/jq-source.git
