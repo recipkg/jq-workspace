@@ -46,6 +46,7 @@ RECIPKG_TEST_JQ="$candidate" python3 -m unittest discover -s tests -p test_recip
 ```sh
 RECIPKG_TEST_JQ="$candidate" RECIPKG_TEST_JQ_REFERENCE=/usr/bin/jq python3 -m unittest discover -s tests -p test_jq_collections.py -v
 RECIPKG_TEST_JQ="$candidate" RECIPKG_TEST_JQ_REFERENCE=/usr/bin/jq python3 -m unittest discover -s tests -p test_jq_aggregation.py -v
+RECIPKG_TEST_JQ="$candidate" RECIPKG_TEST_JQ_REFERENCE=/usr/bin/jq python3 -m unittest discover -s tests -p test_jq_math.py -v
 ```
 
 确认 `/usr/bin/jq` 是希望对照的版本；更多差分命令与限制见[验收样本仓库](https://github.com/recipkg/standard-library-verification)。
