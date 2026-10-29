@@ -41,10 +41,11 @@ cd /path/to/standard-library-verification
 RECIPKG_TEST_JQ="$candidate" python3 -m unittest discover -s tests -p test_recipes.py -k JqSamples -v
 ```
 
-该命令只覆盖有限样本。记录实际通过、失败及跳过的项；即使通过也不能当作完整兼容。集合过滤器还可对照已安装的上游版本：
+该命令只覆盖有限样本。记录实际通过、失败及跳过的项；即使通过也不能当作完整兼容。集合与聚合过滤器还可对照已安装的上游版本：
 
 ```sh
 RECIPKG_TEST_JQ="$candidate" RECIPKG_TEST_JQ_REFERENCE=/usr/bin/jq python3 -m unittest discover -s tests -p test_jq_collections.py -v
+RECIPKG_TEST_JQ="$candidate" RECIPKG_TEST_JQ_REFERENCE=/usr/bin/jq python3 -m unittest discover -s tests -p test_jq_aggregation.py -v
 ```
 
 确认 `/usr/bin/jq` 是希望对照的版本；更多差分命令与限制见[验收样本仓库](https://github.com/recipkg/standard-library-verification)。
